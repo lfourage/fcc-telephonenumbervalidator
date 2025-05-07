@@ -1,0 +1,29 @@
+body {
+    background-color: darkgray;
+    overflow: hidden;
+    margin-top: 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+#rnc-wrap {
+    background-color: gray;
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#rnc-wrap > * {
+    width: 80%;
+}
+
+#output {
+    text-align: center;
+    background-color: antiquewhite;
+    padding: auto;
+}
