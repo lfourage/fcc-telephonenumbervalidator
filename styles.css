@@ -7,3 +7,35 @@ body {
     margin: 0;
     padding: 0;
 }
+
+h1 {
+    text-align: center;
+}
+
+#phone {
+    background-color: black;
+    aspect-ratio: 3/5;
+    width: 280px;
+    border-radius: 20px;
+    padding: 3% 1%;
+    text-align: center;
+}
+
+#phone-screen {
+    background-color: white;
+    width: 98%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#buttons {
+    width: 98%;
+    height: 10%;
+    display: flex;
+}
+
+button {
+    width: 50%;
+}
