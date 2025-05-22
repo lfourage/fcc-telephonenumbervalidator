@@ -6,16 +6,22 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 h1 {
     margin-top: 80px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #phone {
     margin-top: 80px;
-    margin-left: 42%;
+    margin-left: 25%;
     background-color: black;
     width: 280px;
     height: 470px;
@@ -42,4 +48,32 @@ h1 {
 
 button {
     width: 50%;
+}
+
+#results-div {
+    width: 100%;
+    padding-top: 1em;
+}
+
+#results-div > p {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-top: 1px 1px black;
+    border-bottom: 1px 1px black;
+    color: white;
+}
+
+.valid {
+    width: 100%;
+    /*border-top: 1px 1px darkgreen;
+    border-bottom: 1px 1px darkgreen;*/
+    background-color: green;
+}
+
+.invalid {
+    width: 100%;
+    /*border-top: 1px 1px darkred;
+    border-bottom: 1px 1px darkred;*/
+    background-color: red;
 }
