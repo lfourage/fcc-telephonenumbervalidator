@@ -3,21 +3,32 @@ const checkBtn = document.getElementById("check-btn");
 const clearBtn = document.getElementById("clear-btn");
 const resultsDiv = document.getElementById("results-div");
 
-const regexList = [];
+const regex =
+  /^(00|\+)?1? ?(\(\d{3}\)|\d{3})([ .-])?\d{3}([ .-])?\d{4}( ext\.?\d+| x\d+)?$/;
 
 class PhoneNumberValidator {
-  constructor(rawInput) {
-    this.rawInput = rawInput;
+  constructor(input) {
+    this.input = input;
   }
 
   parseInput() {
-    let input = this.rawInput.replace(/ /g, "");
-
-    if (!input) {
-        userInput.value = "";
-        throw "No value";
+    if (!this.input) {
+      userInput.value = "";
+      throw "No value";
     }
-    console.log(input);
+  }
+
+  displayResult() {
+    if (regex.test(this.input)) {
+      resultsDiv.innerHTML += `<p class="valid">
+        Valid US number: ${this.input}
+        </p>`;
+    } else {
+      resultsDiv.innerHTML += `<p class="invalid">
+        Invalid US number: ${this.input}
+        </p>`;
+    }
+    userInput.value = "";
   }
 }
 
@@ -36,6 +47,8 @@ const check = () => {
     }
     return;
   }
+
+  validator.displayResult();
 };
 
 const clear = () => {};
