@@ -66,14 +66,10 @@ button {
 
 .valid {
     width: 100%;
-    /*border-top: 1px 1px darkgreen;
-    border-bottom: 1px 1px darkgreen;*/
     background-color: green;
 }
 
 .invalid {
     width: 100%;
-    /*border-top: 1px 1px darkred;
-    border-bottom: 1px 1px darkred;*/
     background-color: red;
 }
