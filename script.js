@@ -51,10 +51,12 @@ const check = () => {
   validator.displayResult();
 };
 
-const clear = () => {};
-
 userInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") check();
 });
 checkBtn.addEventListener("click", check);
-clearBtn.addEventListener("click", clear);
+
+clearBtn.addEventListener("click", () => {
+    userInput.value = "";
+    resultsDiv.innerHTML = "";
+});
